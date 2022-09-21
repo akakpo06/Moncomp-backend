@@ -1,0 +1,18 @@
+{
+    "name": "mon_comptable/backend",
+    "autoload": {
+        "psr-4": {
+            "MonComptable\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "akakpo06",
+            "email": "godwinakakpo023@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "swiftmailer/swiftmailer": "^6.3"
+    }
+}

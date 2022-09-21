@@ -17,12 +17,11 @@ $db = $db->connect();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($result) {
-            $_SESSION = ["auth" => "true"];
-            $response = "authenticated succesfully";
+            $response = ["status" => true,"id"=> session_id(), "message"=>"authenticated succesfully"];
         }
         else{
             session_destroy();
-            $response = "failed to authenticate";
+            $response = ["message"=>"email ou mot de passe incorrect"];
         }
     }
     echo json_encode($response);
